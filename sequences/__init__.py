@@ -32,7 +32,7 @@ def get_next_value(
     if (getattr(connection, 'pg_version', 0) >= 90500
             and reset_value is None and not nowait):
 
-        # PostgreSQL ≥ 9.5 supports "upsert".
+        # PostgreSQL >= 9.5 supports "upsert".
 
         with connection.cursor() as cursor:
             cursor.execute(UPSERT_QUERY, [sequence_name, initial_value])
