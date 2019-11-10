@@ -1,3 +1,4 @@
+# encoding=utf8
 from django.db import connections, router, transaction
 
 
